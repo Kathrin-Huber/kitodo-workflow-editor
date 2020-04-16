@@ -13,7 +13,7 @@ export default {
     "processingstatusDescription": " ",
     "locked": "Gesperrt",
     "closed": "Abgeschlossen",
-    "metadata": "Metadatem",
+    "metadata": "Metadaten",
     "metadataDescription": "Metadaten in der Aufgabe bearbeiten?",
     "separateStructure": "Erweiterter Strukturbaum",
     "separateStructureDescription": " ",
