@@ -1,4 +1,4 @@
-en_EN = {
+export default {
     "generalGroupLabel": "General Properties",
     "taskGroupLabel": "Task Properties",
     "scriptGroupLabel": "Script Properties",
@@ -49,4 +49,4 @@ en_EN = {
     "taskDefaultName": "Task",
     "startEventDefaultName": "Start",
     "endEventDefaultName": "End"
-}
+};

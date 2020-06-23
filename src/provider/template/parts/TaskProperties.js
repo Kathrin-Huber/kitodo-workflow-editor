@@ -5,7 +5,7 @@ import {
 } from 'bpmn-js/lib/util/ModelUtil';
 
 
-export default function (group, element) {
+export default function (group, element, translate) {
 
     // Only return an entry, if the currently selected
     // element is a task.
@@ -13,104 +13,109 @@ export default function (group, element) {
     if (is(element, 'bpmn:Task')) {
         group.entries.push(entryFactory.checkbox({
             id: 'correction',
-            description: getLocalizedStringForKey('correctionDescription'),
-            label: getLocalizedStringForKey('correction'),
+            description: translate('correctionDescription'),
+            label: translate('correction'),
             modelProperty: 'correction'
         }));
 
         group.entries.push(entryFactory.selectBox({
             id: 'processingStatus',
-            description: getLocalizedStringForKey('processingstatusDescription'),
-            label: getLocalizedStringForKey('processingstatus'),
+            description: translate('processingstatusDescription'),
+            label: translate('processingstatus'),
             selectOptions : [
-                {name: getLocalizedStringForKey('locked'), value: 0},
-                {name: getLocalizedStringForKey('closed'), value: 3}],
+                {name: translate('locked'), value: 0},
+                {name: translate('closed'), value: 3}],
             modelProperty: 'processingStatus'
         }));
 
         group.entries.push(entryFactory.checkbox({
             id: 'typeMetadata',
-            description: getLocalizedStringForKey('metadataDescription'),
-            label: getLocalizedStringForKey('metadata'),
+            description: translate('metadataDescription'),
+            label: translate('metadata'),
             modelProperty: 'typeMetadata'
         }));
 
         group.entries.push(entryFactory.checkbox({
             id: 'separateStructure',
-            description: getLocalizedStringForKey('separateStructureDescription'),
-            label: getLocalizedStringForKey('separateStructure'),
+            description: translate('separateStructureDescription'),
+            label: translate('separateStructure'),
             modelProperty: 'separateStructure'
         }));
 
         group.entries.push(entryFactory.checkbox({
             id: 'typeImagesRead',
-            description: getLocalizedStringForKey('typeImagesReadDescription'),
-            label: getLocalizedStringForKey('typeImagesRead'),
+            description: translate('typeImagesReadDescription'),
+            label: translate('typeImagesRead'),
             modelProperty: 'typeImagesRead'
         }));
 
         group.entries.push(entryFactory.checkbox({
             id: 'typeImagesWrite',
-            description: getLocalizedStringForKey('typeImagesWriteDescription'),
-            label: getLocalizedStringForKey('typeImagesWrite'),
+            description: translate('typeImagesWriteDescription'),
+            label: translate('typeImagesWrite'),
             modelProperty: 'typeImagesWrite'
         }));
 
         group.entries.push(entryFactory.checkbox({
             id: 'typeGenerateImages',
-            description: getLocalizedStringForKey('typeGenerateImagesDescription'),
-            label: getLocalizedStringForKey('typeGenerateImages'),
+            description: translate('typeGenerateImagesDescription'),
+            label: translate('typeGenerateImages'),
             modelProperty: 'typeGenerateImages'
         }));
 
 
         group.entries.push(entryFactory.checkbox({
             id: 'typeValidateImages',
-            description: getLocalizedStringForKey('typeValidateImagesDescription'),
-            label: getLocalizedStringForKey('typeValidateImages'),
+            description: translate('typeValidateImagesDescription'),
+            label: translate('typeValidateImages'),
             modelProperty: 'typeValidateImages'
         }));
 
 
         group.entries.push(entryFactory.checkbox({
             id: 'typeExportDMS',
-            description: getLocalizedStringForKey('typeExportDMSDescription'),
-            label: getLocalizedStringForKey('typeExportDMS'),
+            description: translate('typeExportDMSDescription'),
+            label: translate('typeExportDMS'),
             modelProperty: 'typeExportDMS'
         }));
 
         group.entries.push(entryFactory.checkbox({
             id: 'typeCloseVerify',
-            description: getLocalizedStringForKey('typeCloseVerifyDescription'),
-            label: getLocalizedStringForKey('typeCloseVerify'),
+            description: translate('typeCloseVerifyDescription'),
+            label: translate('typeCloseVerify'),
             modelProperty: 'typeCloseVerify'
         }));
 
         group.entries.push(entryFactory.checkbox({
             id: 'typeAcceptClose',
+<<<<<<< Updated upstream
             description: getLocalizedStringForKey('typeAcceptClose'),
             label: getLocalizedStringForKey('typeAcceptClose'),
+=======
+            description: translate('typeAcceptCloseDescription'),
+            label: translate('typeAcceptClose'),
+>>>>>>> Stashed changes
             modelProperty: 'typeAcceptClose'
         }));
 
         group.entries.push(entryFactory.checkbox({
             id: 'typeAutomatic',
-            description: getLocalizedStringForKey('typeAutomaticDescription'),
-            label: getLocalizedStringForKey('typeAutomatic'),
+            description: translate('typeAutomaticDescription'),
+            label: translate('typeAutomatic'),
             modelProperty: 'typeAutomatic'
         }));
 
         group.entries.push(entryFactory.checkbox({
             id: 'batchStep',
-            description: getLocalizedStringForKey('batchStepDescription'),
-            label: getLocalizedStringForKey('batchStep'),
+            description: translate('batchStepDescription'),
+            label: translate('batchStep'),
             modelProperty: 'batchStep'
         }));
 
         group.entries.push(entryFactory.checkbox({
             id: 'concurrent',
-            description: getLocalizedStringForKey('concurrentDescription'),
-            label: getLocalizedStringForKey('concurrent'),
+            description: translate('concurrentDescription'),
+            label: translate('concurrent'),
             modelProperty: 'concurrent'
         }));
 

@@ -42,18 +42,7 @@ module.exports = function(grunt) {
           }
         ]
       },
-      
-      localization: {
-        files: [ 
-          {
-          expand: true,
-          cwd: 'src/language/',
-          src: ['*.js'],
-          dest: 'build/language'
-          }
-        ]
-      },
-
+  
       src_assets: {
         files: [
           {
@@ -119,7 +108,7 @@ module.exports = function(grunt) {
     watch: {
       assets: {
         files: [ 'src/**/*.*' ],
-        tasks: [ 'copy:src_assets', 'copy:custom_js' , 'copy:localization']
+        tasks: [ 'copy:src_assets', 'copy:custom_js']
       },
 
       less: {

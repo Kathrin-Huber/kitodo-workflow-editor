@@ -34,27 +34,3 @@ $(window).on("load", function () {
 		});
 	});
 });
-
-function getLocalizedStringForKey(key) {
-	
-	var availableLanguages = ["de", "en"];
-	
-	var localizedString;
-		
-	switch (availableLanguages.indexOf(language)) {	
-		default: {
-				localizedString = de_DE[key];
-			break; 
-		}
-		case 1: {
-			localizedString = en_EN[key];
-			break;
-		}
-	}
-	
-	if(!localizedString) {
-		localizedString = key;
-	}
-	
-	return localizedString;
-}

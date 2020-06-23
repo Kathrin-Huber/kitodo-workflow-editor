@@ -5,6 +5,8 @@ import propertiesPanelModule from 'bpmn-js-properties-panel';
 import propertiesProviderModule from './provider/template';
 import templateModdleDescriptor from './descriptors/template';
 
+import customTranslate from './language/customTranslate';
+
 import {
   debounce
 } from 'min-dash';
@@ -13,6 +15,10 @@ import diagramXML from '../resources/initialDiagram.bpmn';
 
 var container = $('#js-drop-zone');
 
+var customTranslateModule = {
+  translate: [ 'value', customTranslate ]
+};
+
 var bpmnModeler = new BpmnModeler({
   container: '#js-canvas',
   propertiesPanel: {
@@ -20,7 +26,8 @@ var bpmnModeler = new BpmnModeler({
   },
   additionalModules: [
     propertiesPanelModule,
-    propertiesProviderModule
+    propertiesProviderModule,
+    customTranslateModule
   ],
   moddleExtensions: {
     template: templateModdleDescriptor,

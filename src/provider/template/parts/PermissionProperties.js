@@ -8,7 +8,7 @@ import {
 } from 'bpmn-js/lib/util/ModelUtil';
 
 
-export default function (group, element) {
+export default function (group, element, translate) {
 
     // Only return an entry, if the currently selected
     // element is a task.

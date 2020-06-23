@@ -27,11 +27,11 @@ module.exports = function(group, element, translate) {
         // Set a default value if none is assigned
         if(assignedName == undefined) {
             if (is(element, 'bpmn:Task')) {
-                res[options.modelProperty] = getLocalizedStringForKey('taskDefaultName');
+                res[options.modelProperty] = translate('taskDefaultName');
             } else if (is(element, 'bpmn:StartEvent')) {
-                res[options.modelProperty] = getLocalizedStringForKey('startEventDefaultName')
+                res[options.modelProperty] = translate('startEventDefaultName')
             } else if (is(element, 'bpmn:EndEvent')) {
-                res[options.modelProperty] = getLocalizedStringForKey('endEventDefaultName')
+                res[options.modelProperty] = translate('endEventDefaultName')
             }
         } else {
             res[options.modelProperty] = assignedName;
