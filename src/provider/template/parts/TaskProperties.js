@@ -88,13 +88,8 @@ export default function (group, element, translate) {
 
         group.entries.push(entryFactory.checkbox({
             id: 'typeAcceptClose',
-<<<<<<< Updated upstream
-            description: getLocalizedStringForKey('typeAcceptClose'),
-            label: getLocalizedStringForKey('typeAcceptClose'),
-=======
             description: translate('typeAcceptCloseDescription'),
             label: translate('typeAcceptClose'),
->>>>>>> Stashed changes
             modelProperty: 'typeAcceptClose'
         }));
 
