@@ -25,9 +25,9 @@ $(window).on("load", function () {
 		if(!language) {
 			language = "de";
 		}
-		
+
 		var userRoles = $("#editForm\\:workflowTabView\\:roleId_input").children();
-		
+
 		userRoles.each(function( index ) {
 			var role = { name: $(this).text(), value: $(this).val() };
 			availableUserRoles.push(role);
